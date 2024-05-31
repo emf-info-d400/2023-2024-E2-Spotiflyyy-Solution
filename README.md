@@ -87,13 +87,13 @@ Toujours dans le package `models`, créez une classe nommée `Playlist`. Un albu
 - un certain nombre de `chansons`
 - un `nom` donné à cette playlist (par exemple "Playlist calme pour révisions" ou "Party Time")
 
-Pour **créer une nouvelle playlist**, il faut fournir son propriétaire et son nom. La playlist ne contient pas de chanson à sa création, elle a une taille de 0.
+Pour **créer une nouvelle playlist**, il faut fournir son propriétaire et son nom. La playlist ne contient pas de chanson à sa création, elle a une taille de 0. On pourra récupérer et modifier les caractéristiques en tout temps.
 
 On doit pouvoir **demander à une playlist si oui ou non elle contient une certaine chanson**.
 
-On doit pouvoir **ajouter une chanson** à une playlist. La chanson a ajouter est toujours placée en dernier dans la liste des chansons. On ne doit pas pouvoir ajouter 2 fois la même chanson dans la playlist. ATTENTION : la liste des chansons d'une Playlist ne contient jamais d'espace disponibles (`null`) pour accueillir des chansons supplémentaires mais juste les chansons qu'elle contient, sans plus. Il va donc falloir faire le nécessaire pour aggrandir cette liste et y mettre cette nouvelle chanson à sa fin.
+On doit pouvoir **ajouter une chanson** à une playlist. La chanson a ajouter est toujours placée en dernier dans la liste des chansons. On ne doit pas pouvoir ajouter 2 fois la même chanson dans la playlist. ATTENTION : la liste des chansons d'une Playlist ne contient jamais d'espace disponibles (`null`) pour accueillir des chansons supplémentaires mais juste les chansons qu'elle contient, sans plus. Il va donc falloir faire le nécessaire pour aggrandir cette liste et y mettre cette nouvelle chanson à sa fin. Cette méthode est détaillée sous forme de diagramme de séquence/interaction plus bas.
 
-De même, on doit pouvoir **retirer une chanson** de la playlist. On précise quelle chanson il faut retirer. Une fois la chanson retirée, la playlist ne contient jamais de piste vide, elle a toujours une taille adaptée. Cette méthode est détaillée sous forme de diagramme de séquence/interaction plus bas.
+De même, on doit pouvoir **retirer une chanson** de la playlist. On précise quelle chanson il faut retirer. Une fois la chanson retirée, la playlist ne contient jamais de piste vide, elle a toujours une taille adaptée. 
 
 On doit pouvoir **demander à une playlist sa durée totale** en secondes, c-à-d la somme des durées de chacune des chansons qu'elle contient.
 
@@ -140,9 +140,9 @@ Voici ci-dessous les données (albums et leurs chansons) que vous allez devoir u
 | Paparazzi   | 3:28  |
 |||
 
-#### Album 'PSY 6 - PSY'
+#### Album 'Psy 6 - PSY'
 
-| PSY 6 - PSY       |  |
+| Psy 6 - PSY       |  |
 |---------------|-------|
 | Gangnam Style | 3:39 |
 |||
@@ -158,13 +158,13 @@ Voici ci-dessous les données (albums et leurs chansons) que vous allez devoir u
 
 Dans le `main()` de la classe `Application` déjà fournie, effectuez les opérations suivantes :
 
-- Créez les albums listés ci-dessous avec leurs chansons.
+- Créez les albums listés ci-dessous avec leurs chansons. **N'oubliez pas d'utiliser votre service de calcul durée pour donner la durée correcte de vos chansons!**
 - Créez un tableau contenant ces 3 albums, appelé `bibliotheque`.
 - Ensuite, créez un tableau pouvant accueillir 5 playlists, appelé `playlists`.
-- Dans la première position du tableau, créez une playlist nommée "Concentration - Revisions" et appartenant à "fan2Squ33zie".
+- Dans la première position du tableau, créez une playlist nommée "Playlist pour les vacances" et appartenant à "fan2Squ33zie".
 - Dans la dernière position du tableau, créez une playlist nommée "Concentration - Revisions" et vous appartenant.
 - Ajoutez des chansons de votre choix à ces playlists (au minimum 1 par playlist)
-- Pour finir, affichez le contenu des tableaux `bibliotheque`et `playlists`.
+- Pour finir, affichez le contenu des tableaux `bibliotheque` et `playlists`.
 
 ## Résultat sur la console
 
