@@ -35,14 +35,14 @@ public class App {
 
         //Création de playlists et ajout de chansons
         playlists[0]=new Playlist("Playlist pour les vacances","fan2Squ33zie");
-        playlists[0].ajouterAlbum(album1);
-        playlists[0].ajouterChanson(pistes3[0]);
-        playlists[0].retirerChanson(pistes3[0]);
+        playlists[0].ajouterChanson(pistes1[0]);
+        playlists[0].ajouterChanson(pistes1[1]);
+        playlists[0].ajouterChanson(pistes1[2]);
         playlists[0].ajouterChanson(pistes3[0]);
 
         playlists[4]=new Playlist("Concentration - Revisions","Fanny Riedo");
-        playlists[4].ajouterAlbum(album2);
-
+        playlists[4].ajouterChanson(pistes2[0]);
+        
         //affichage de la bibliothèque et des playlists
         System.out.println("Bibliothèque:");
         for (int i = 0; i < bibliotheque.length; i++) {

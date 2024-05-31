@@ -95,8 +95,6 @@ On doit pouvoir **ajouter une chanson** à une playlist. La chanson a ajouter es
 
 De même, on doit pouvoir **retirer une chanson** de la playlist. On précise quelle chanson il faut retirer. Une fois la chanson retirée, la playlist ne contient jamais de piste vide, elle a toujours une taille adaptée. Cette méthode est détaillée sous forme de diagramme de séquence/interaction plus bas.
 
-On doit également pouvoir **ajouter un album entier** à une playlist. Dans ce cas, chaque chanson de l'album en question sera ajoutée à la playlist (ne réinventez pas la roue, pensez à réutiliser les fonctionnalités déjà réalisées pour faire cela).
-
 On doit pouvoir **demander à une playlist sa durée totale** en secondes, c-à-d la somme des durées de chacune des chansons qu'elle contient.
 
 Si on **affiche une playlist**, celle-ci doit se montrer sous cette forme:

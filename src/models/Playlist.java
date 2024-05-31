@@ -48,17 +48,6 @@ public class Playlist {
         return reussite;
     }
 
-    public boolean ajouterAlbum(Album album) {
-        boolean resultat = false;
-        Chanson[] chansonsAAjouter=album.getChansons();
-
-        for (int i = 0; i < chansonsAAjouter.length; i++) {
-            this.ajouterChanson(chansonsAAjouter[i]);
-        }
-
-        return resultat;
-    }
-
     public boolean trouverChanson(Chanson chanson) {
         boolean resultat = false;
         // vérification que la chanson n'est pas encore dans la playlist
