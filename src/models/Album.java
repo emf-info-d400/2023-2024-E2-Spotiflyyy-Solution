@@ -25,6 +25,34 @@ public class Album {
 
     }
 
+    public Chanson trouverChansonParTitre(String titre) {
+        Chanson resultat = null;
+        for (int i = 0; i < chansons.length; i++) {
+            if (chansons[i].getTitre() == titre) {
+                resultat = chansons[i];
+                break;
+            }
+        }
+        return resultat;
+    }
+
+    public int getDureeLaPlusLongue() {
+        int dureeMax = 0;
+
+        for (int i = 0; i < chansons.length; i++) {
+            if (chansons[i] != null && chansons[i].getDuree() > dureeMax) {
+                dureeMax = chansons[i].getDuree();
+            }
+        }
+        return dureeMax;
+
+    }
+
+    public Chanson chansonAleatoire() {
+        int indexAleatoire = (int) Math.random() * (chansons.length + 1);
+        return chansons[indexAleatoire];
+    }
+
     @Override
     public String toString() {
         return titre + " par " + interprete + " : " + chansons.length + " titres, durée "

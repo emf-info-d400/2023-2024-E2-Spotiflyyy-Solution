@@ -16,14 +16,14 @@ public class Playlist {
     public boolean ajouterChanson(Chanson chanson) {
         boolean reussite = false;
 
-        if(!trouverChanson(chanson)){
-            Chanson [] nouvellePlaylist = new Chanson[chansons.length+1];
+        if (!trouverChanson(chanson)) {
+            Chanson[] nouvellePlaylist = new Chanson[chansons.length + 1];
             for (int i = 0; i < chansons.length; i++) {
-                nouvellePlaylist[i]=chansons[i];
+                nouvellePlaylist[i] = chansons[i];
             }
-            nouvellePlaylist[nouvellePlaylist.length-1]=chanson;
-            chansons=nouvellePlaylist;
-            reussite=true;
+            nouvellePlaylist[nouvellePlaylist.length - 1] = chanson;
+            chansons = nouvellePlaylist;
+            reussite = true;
         }
 
         return reussite;
@@ -31,19 +31,18 @@ public class Playlist {
 
     public boolean retirerChanson(Chanson chanson) {
         boolean reussite = false;
-        
-        if(trouverChanson(chanson)){
-            Chanson [] nouvellePlaylist = new Chanson[chansons.length-1];
-            int j=0;
-            for (int i = 0; i < chansons.length; i++) {
-                if(chansons[i]!=chanson)
-                    nouvellePlaylist[j]=chansons[i];
-                    j++;
-            }
-            chansons=nouvellePlaylist;
-            reussite=true;
-        }
 
+        if (trouverChanson(chanson)) {
+            Chanson[] nouvellePlaylist = new Chanson[chansons.length - 1];
+            int j = 0;
+            for (int i = 0; i < chansons.length; i++) {
+                if (chansons[i] != chanson)
+                    nouvellePlaylist[j] = chansons[i];
+                j++;
+            }
+            chansons = nouvellePlaylist;
+            reussite = true;
+        }
 
         return reussite;
     }
@@ -69,13 +68,46 @@ public class Playlist {
             }
         }
         return dureeTotale;
+    }
 
+    public int getDureeMoyenne() {
+        int dureeMoyenne = 0;
+        if (chansons.length != 0) {
+            dureeMoyenne = getDureeTotale() / chansons.length;
+        }
+        return dureeMoyenne;
+    }
+
+    public int supprimerChansonsLongues(int seuil) {
+        int compteur = 0;
+
+        for (int i = 0; i < chansons.length; i++) {
+            if (chansons[i].getDuree() > seuil){
+                chansons[i] = null;
+                compteur++;
+            }
+        }
+
+        if (compteur != 0) {
+            Chanson[] nouvellePlaylist = new Chanson[chansons.length - compteur];
+            int j = 0;
+            for (int i = 0; i < chansons.length; i++) {
+                if (chansons[i] != null) {
+                    nouvellePlaylist[j] = chansons[i];
+                    j++;
+                }
+            }
+            chansons = nouvellePlaylist;
+        }
+
+        return compteur;
     }
 
     @Override
     public String toString() {
         return "Playlist \"" + nom + "\" crée par " + proprietaire + " : " + chansons.length + " titres, durée "
-                + serviceCalculDuree.calculeMinutesEntieres(getDureeTotale()) + " minutes et " + serviceCalculDuree.calculeResteSecondes(getDureeTotale()) +  " secondes.";
+                + serviceCalculDuree.calculeMinutesEntieres(getDureeTotale()) + " minutes et "
+                + serviceCalculDuree.calculeResteSecondes(getDureeTotale()) + " secondes.";
     }
 
     public String getProprietaire() {

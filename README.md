@@ -93,7 +93,7 @@ On doit pouvoir **demander à une playlist si oui ou non elle contient une certa
 
 On doit pouvoir **ajouter une chanson** à une playlist. La chanson a ajouter est toujours placée en dernier dans la liste des chansons. On ne doit pas pouvoir ajouter 2 fois la même chanson dans la playlist. ATTENTION : la liste des chansons d'une Playlist ne contient jamais d'espace disponibles (`null`) pour accueillir des chansons supplémentaires mais juste les chansons qu'elle contient, sans plus. Il va donc falloir faire le nécessaire pour aggrandir cette liste et y mettre cette nouvelle chanson à sa fin. Cette méthode est détaillée sous forme de diagramme de séquence/interaction plus bas.
 
-De même, on doit pouvoir **retirer une chanson** de la playlist. On précise quelle chanson il faut retirer. Une fois la chanson retirée, la playlist ne contient jamais de piste vide, elle a toujours une taille adaptée. 
+De même, on doit pouvoir **retirer une chanson** de la playlist. On précise quelle chanson il faut retirer. Une fois la chanson retirée, la playlist ne contient jamais de piste vide, elle a toujours une taille adaptée.
 
 On doit pouvoir **demander à une playlist sa durée totale** en secondes, c-à-d la somme des durées de chacune des chansons qu'elle contient.
 
@@ -165,6 +165,23 @@ Dans le `main()` de la classe `Application` déjà fournie, effectuez les opéra
 - Dans la dernière position du tableau, créez une playlist nommée "Concentration - Revisions" et vous appartenant.
 - Ajoutez des chansons de votre choix à ces playlists (au minimum 1 par playlist)
 - Pour finir, affichez le contenu des tableaux `bibliotheque` et `playlists`.
+
+## Fonctionnalités supplémentaires
+
+Une fois tout ce qui précède réalisé et fonctionnel, ajoutiez ces capacités à vos classes `Album` et `Playlist`:
+
+### Album
+
+- **Recherche par titre** : on doit pouvoir demander à un `Album` une chanson en lui fournissant le titre (par exemple, "Gangnam Style"). Si la chanson n'est pas dans l'album, on obtiendra `null`.
+- **Recherche de la plus longue durée de chanson** : on doit pouvoir demander à un `Album` la durée de sa chanson la plus longue. On obtiendra la durée en secondes.
+- **Chanson aléatoire** : on doit pouvoir demander à un `Album` de retourner une chanson choisie au hasard.
+
+### Playlist
+
+- **Supprimer les chansons longues** : on doit pouvoir demander à une `Playlist` de supprimer les chansons plus longues que la durée fournie en secondes. On obtiendra le nombre de chansons supprimées.
+- **Calcul de la durée moyenne des chansons de la playlist** : on doit pouvoir demander à une `Playlist` la durée moyenne des chansons qu'elle contient. On obtiendra la durée en secondes.
+
+**Pensez à tester vos méthodes!**
 
 ## Résultat sur la console
 
