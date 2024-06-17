@@ -166,23 +166,6 @@ Dans le `main()` de la classe `Application` déjà fournie, effectuez les opéra
 - Ajoutez des chansons de votre choix à ces playlists (au minimum 1 par playlist)
 - Pour finir, affichez le contenu des tableaux `bibliotheque` et `playlists`.
 
-## Fonctionnalités supplémentaires
-
-Une fois tout ce qui précède réalisé et fonctionnel, ajoutiez ces capacités à vos classes `Album` et `Playlist`:
-
-### Album
-
-- **Recherche par titre** : on doit pouvoir demander à un `Album` une chanson en lui fournissant le titre (par exemple, "Gangnam Style"). Si la chanson n'est pas dans l'album, on obtiendra `null`.
-- **Recherche de la plus longue durée de chanson** : on doit pouvoir demander à un `Album` la durée de sa chanson la plus longue. On obtiendra la durée en secondes.
-- **Chanson aléatoire** : on doit pouvoir demander à un `Album` de retourner une chanson choisie au hasard.
-
-### Playlist
-
-- **Supprimer les chansons longues** : on doit pouvoir demander à une `Playlist` de supprimer les chansons plus longues que la durée fournie en secondes. On obtiendra le nombre de chansons supprimées.
-- **Calcul de la durée moyenne des chansons de la playlist** : on doit pouvoir demander à une `Playlist` la durée moyenne des chansons qu'elle contient. On obtiendra la durée en secondes.
-
-**Pensez à tester vos méthodes!**
-
 ## Résultat sur la console
 
 Si vous avez correctement réalisé cette application vous devriez obtenir un affichage ressemblant à ceci :
@@ -214,6 +197,23 @@ Playlist "Concentration - Revisions" crée par Fanny Riedo : 1 titres, durée 3 
 PSY - Gangnam Style, 3:39
 ****************************
 ```
+
+## Fonctionnalités supplémentaires
+
+Une fois tout ce qui précède réalisé et fonctionnel, ajoutiez ces capacités à vos classes `Album` et `Playlist`:
+
+### Album
+
+- **Recherche par titre** : on doit pouvoir demander à un `Album` une chanson en lui fournissant le titre (par exemple, "Gangnam Style"). Si la chanson n'est pas dans l'album, on obtiendra `null`.
+- **Recherche de la plus longue durée de chanson** : on doit pouvoir demander à un `Album` la durée de sa chanson la plus longue. On obtiendra la durée en secondes.
+- **Chanson aléatoire** : on doit pouvoir demander à un `Album` de retourner une chanson choisie au hasard.
+
+### Playlist
+
+- **Supprimer les chansons longues** : on doit pouvoir demander à une `Playlist` de supprimer les chansons plus longues que la durée fournie en secondes. On obtiendra le nombre de chansons supprimées.
+- **Calcul de la durée moyenne des chansons de la playlist** : on doit pouvoir demander à une `Playlist` la durée moyenne des chansons qu'elle contient. On obtiendra la durée en secondes.
+
+**Pensez à tester vos méthodes!**
 
 ## RESTITUTION
 
